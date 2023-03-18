@@ -4,8 +4,8 @@ import {separatorLine} from "./terminal"
 const editorElement = document.getElementById("editor") as HTMLElement
 const statsElement = document.getElementById("stats") as HTMLElement
 
-const linesPerPage = 3
-const typingTime = 45000
+const linesPerPage = 20
+const typingTime = 60000
 const cursorClassName = "cursor"
 const nextClassName = "next"
 const wrongClassName = "wrong"

@@ -3,7 +3,8 @@ import {backspaceKey, enterKey} from "./keyboard"
 const terminalElement = document.getElementById("terminal") as HTMLElement
 const cursorElement = document.getElementById("cursor") as HTMLElement
 
-export const separatorLine = "------------------------------------------------"
+export const separatorLine =
+    "--------------------------------------------------------------------------"
 const promptPrefix = "$ "
 const typingDelay = 20
 
@@ -118,7 +119,6 @@ export const chooseOption = async <T extends Option>(options: T[]) => {
         } else {
             const errorMessage = chooseOptionErrorMessages[tryIndex++]
             tryIndex = tryIndex % chooseOptionErrorMessages.length
-
             await writeLines([
                 " ",
                 `${errorMessage[0]} number between 1 and ${options.length}.`,
@@ -127,7 +127,6 @@ export const chooseOption = async <T extends Option>(options: T[]) => {
             ])
         }
     }
-
     return options[index]
 }
 
